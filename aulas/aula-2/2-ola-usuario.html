@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Título</h1>
+
+            <p>insira o seu nome para o site te dizer seja bem-vindo</p>
+
+            <label for="txt1">seu nome:</label>
+            
+            <input autocomplete="off" type="text" id="txt1">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+            var nomeDoUsuario = document.getElementById("txt1").value;
+
+            var olausuario = "seja bem-vindo " + nomeDoUsuario;
+
+            alert(olausuario)
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Título</h1>
+
+            <p>Parágrafo</p>
+
+            <label for="txt1">Caixa de Texto:</label>
+            
+            <input autocomplete="off" type="number" id="txt1">
+
+            <label for="txt2">Caixa de Texto:</label>
+            
+            <input autocomplete="off" type="number" id="txt2"><br>
+
+            <button onclick="botao_click()" style="width: 80%;">calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var caixa1 = document.getElementById("txt1").value;
+
+            var num1 = parseFloat(caixa1)
+
+            var caixa2 = document.getElementById("txt2").value;
+
+            var num2 = parseInt(caixa2)
+
+            var soma = num1 + num2;
+
+            var mensagem = "a soma é " + soma;
+
+            alert(mensagem)
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>media</h1>
+
+            <p>escreva dois numeros para ver a media entre eles</p>
+
+            <label for="txt1">numero 1</label>
+            
+            <input type="number" id="txt1">
+
+            <label for="txt2">numero 2</label>
+            
+            <input type="number" id="txt2">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var caixa1 = document.getElementById("txt1").value;
+
+            var num1 = parseFloat(caixa1);
+
+            var caixa2 = document.getElementById("txt2").value;
+
+            var num2 = parseFloat(caixa2);
+
+            var soma = num1 + num2;
+
+            var divisao = soma / 2;
+
+            var mensagem = "a media é " + divisao;
+
+            alert(mensagem);
+
+        }
+
+    </script>
+
+</body>
+</html>
