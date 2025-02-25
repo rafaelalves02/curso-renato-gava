@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>valor de terreno</h1>
+
+            <p>calcule o valor de um terreno colocando suas medidas e o valor do metro quadrado
+            </p>
+
+            <label for="largura">largura:</label>
+            <input type="number" id="largura" required placeholder="em metros"><br>
+
+            <label for="comprimento">comprimento:</label>
+            <input type="number" id="comprimento" required placeholder="em metros"><br>
+
+            <label for="valorDoMetro">valor do metro quadrado:</label>
+            <input type="number" id="valorDoMetro" required placeholder="400,00">
+            <br>
+
+            <button onclick="botao_click()">calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var caixaLargura = document.getElementById("largura").value;
+
+            var largura = parseFloat(caixaLargura);
+
+            var caixaComprimento = document.getElementById("comprimento").value;
+
+            var comprimento = parseFloat(caixaComprimento);
+
+            var caixaValorDoMetro = document.getElementById("valorDoMetro").value;
+
+            var valorDoMetro = parseFloat(caixaValorDoMetro);
+
+            var valor = (largura * comprimento) * valorDoMetro;
+
+            var mensagem = "o valor do terreno é " + valor
+
+            alert(mensagem);
+        }
+
+    </script>
+
+</body>
+</html>
