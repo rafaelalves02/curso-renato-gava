@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>salario</h1>
+
+            <p>coloque suas informações abaixo para saber o seu salario</p>
+
+            <label for="nome">nome:</label>
+            <input type="text" id="nome"><br>
+
+            <label for="salarioPorHora">salario por hora:</label>
+            <input type="text" id="salarioPorHora"><br>
+
+            <label for="trabalhadas">horas trabalhadas:</label>
+            <input type="text" id="trabalhadas"><br>
+
+            <button onclick="botao_click()">calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var nome = document.getElementById("nome").value;
+            var caixaPorHora = document.getElementById("salarioPorHora").value;
+            var salarioPorHora = parseFloat(caixaPorHora);
+            var caixatrabalhadas = document.getElementById("trabalhadas").value;
+            var trabalhadas = parseFloat(caixatrabalhadas);
+            var salario = salarioPorHora * trabalhadas;
+            var mensagem = nome + ",seu salario total pelas " + trabalhadas + "horas trabalhadas é " + salario + " reais";
+            alert(mensagem);
+        
+
+        }
+
+    </script>
+
+</body>
+</html>

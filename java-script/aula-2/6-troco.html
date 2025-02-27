@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>troco</h1>
+
+            <p>preencha os espaços abaixo para calcular o troco de um produto</p>
+
+            
+
+            <label for="valorPago">valor pago:</label>
+            <input type="number" id="valorPago">
+            <br> 
+
+            <label for="preco">preço do produto:</label>
+            <input type="number" id="preco"><br>
+
+            <label for="quantidade">quantidade de produtos:</label>
+            <input type="number" id="quantidade" step="1"><br>
+
+            <button onclick="botao_click()">calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var caixaPago = document.getElementById("valorPago").value;
+            var valorPago = parseFloat(caixaPago);
+            var caixaPreco = document.getElementById("preco").value;
+            var preco = parseFloat(caixaPreco);
+            var caixaQuantidade = document.getElementById("quantidade").value;
+            var quantidade = parseInt(caixaQuantidade);
+            var calculos = valorPago - preco * quantidade;
+            var mensagem = "o troco é " + calculos;
+            alert(mensagem);
+        }
+
+    </script>
+
+</body>
+</html>
