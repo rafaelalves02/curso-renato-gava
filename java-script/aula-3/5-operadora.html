@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>operadora</h1>
+
+            <p>coloque os minutos usados para descobrir o valor a ser pago</p>
+
+            <label for="minutosGastos">minutos usados:</label>
+            <input type="number" id="minutosGastos">
+
+            <button onclick="botao_click()">calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var minutosGastosTxt = document.getElementById("minutosGastos").value;
+
+            var minutosGastos = parseFloat(minutosGastosTxt);
+
+            var valorTotal;
+
+            if (minutosGastos > 100) {
+                valorTotal = (minutosGastos - 100) * 2 + 50;
+                mensagem = "o valor total é R$ " + valorTotal;
+                alert(mensagem);
+            }
+            else{
+                valorTotal = 50;
+                mensagem = "o valor total é R$ " + valorTotal;
+                alert(mensagem);
+            } 
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>consumo de gasolina</h1>
+
+            <p>coloque a distancia percorrida e o quanto de gasolina foi gasto nesse trajeto</p>
+
+            <label for="distancia">distancia percorrida:</label>
+            <input type="number" id="distancia" placeholder="em km"><br>
+
+            <label for="consumo">consumo de gasolina:</label>
+            <input type="number" id="consumo" placeholder="em litros"><br>
+
+            <button onclick="botao_click()">calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var caixaDistancia = document.getElementById("distancia").value;
+            var distancia = parseFloat(caixaDistancia);
+            var caixaConsumo = document.getElementById("consumo").value;
+            var consumo = parseFloat(caixaConsumo);
+            var kml = distancia / consumo;
+            var mensagem = "o consumo médio de gasolina do seu veiculo é " + kml + "kilometros por litro"
+            alert(mensagem);
+
+        }
+
+    </script>
+
+</body>
+</html>

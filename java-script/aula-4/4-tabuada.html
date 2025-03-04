@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>tabuada</h1>
+
+            <p>coloque o numero que deseja descobrir a tabuada</p>
+
+            <label for="txtNumero">numero</label>  
+            <input type="text" id="txtNumero">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var txtNumero = document.getElementById("txtNumero").value;
+            var numero = parseInt(txtNumero);
+
+            var mensagem = "a tabuada de " + numero + " é: \r";
+
+            for (var i = 1;i <= 10;i++) {
+                var calculo = numero * i;
+                var resultados = numero + " x " + i + "=" + calculo + "\r";
+                mensagem += resultados;
+            }
+
+            alert(mensagem);
+
+        }
+
+    </script>
+
+</body>
+</html>

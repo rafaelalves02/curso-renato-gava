@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>media</h1>
+
+            <p>escreva as suas notas do primeiro e segundo semestre e descruba se passou</p>
+
+            <label for="primeiroSemestreTxt">nota do primeiro semestre</label>
+            <input type="number" id="primeiroSemestreTxt">
+
+            <label for="segundoSemestreTxt">nota do segundo semestre</label>
+            <input type="number" id="segundoSemestreTxt">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var primeiroSemestreTxt = document.getElementById("primeiroSemestreTxt").value;
+
+            var segundoSemestreTxt = document.getElementById("segundoSemestreTxt").value;
+
+            var primeiroSemestre = parseFloat(primeiroSemestreTxt);
+
+            var segundoSemestre = parseFloat(segundoSemestreTxt);
+
+            var media = (primeiroSemestre + segundoSemestre) / 2;
+
+            if (media >= 5){
+                alert("você foi aprovado!");
+            }
+            else {
+                alert("você foi reprovado!");
+            }
+
+
+        }
+
+    </script>
+
+</body>
+</html>

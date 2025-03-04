@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>boa noite</h1>
+
+            <p>informe o seu horario atual para o site te dizer boa noite</p>
+
+            <label for="horario">horario: </label>
+            
+            <input type="number" id="horario">
+
+            <button onclick="botao_click()">boa noite</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var txtHorario = document.getElementById("horario").value;
+
+            var horario = parseFloat(txtHorario);
+
+            if (horario >= 18) {
+                alert("boa noite");
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
