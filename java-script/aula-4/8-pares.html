@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>pares</h1>
+
+            <p>coloque qualquer numero abaixo e descubra a soma de todos os numeros pares entre um e o numero escolhido</p>
+
+            <label for="txtNum">numero: </label>
+            
+            <input type="number" id="txtNum">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            var txtNum = document.getElementById("txtNum").value;
+            var num = parseInt(txtNum);
+
+            var soma = 0;
+
+            for(var i = 1;i <= num;i++) {
+                var resto = i % 2;
+
+                if (resto == 0) {
+                    soma += i;
+                }
+            }
+
+            var mensagem = "a soma dos numeros pares é: " + soma;
+            alert(mensagem);
+
+        }
+
+    </script>
+
+</body>
+</html>
