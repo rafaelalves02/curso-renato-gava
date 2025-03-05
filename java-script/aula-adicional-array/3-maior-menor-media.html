@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>maior menor e media</h1>
+
+            <label for="txtQunantidade">quantidade de numeros:</label>
+            <input type="number" id="txtQunantidade">
+
+            <label for="txtNumeros">numeros:</label>
+            <input type="number" id="txtNumeros">
+
+            <button onclick="botao_click()">armazenar</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        var numeros = [];
+        var quantidade = parseInt(document.getElementById("txtQunantidade").value);
+        var numeroDigitado = parseInt(document.getElementById("txtNumeros").value);
+
+        function botao_click() {
+
+            if (numeros.length < quantidade) {
+                numeros.push(numeroDigitado);
+
+                document.getElementById("txtNumeros").value = "";
+                document.getElementById("txtNumeros").focus();
+
+                alert(numeros.toString());
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

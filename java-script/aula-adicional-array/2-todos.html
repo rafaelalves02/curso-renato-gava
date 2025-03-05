@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mk</title>
+</head>
+<body>
+    <h1>clientes</h1>
+    <button onclick="botao_click()">Botão</button>
+</body>
+</html>
+
+<script>
+    var clientes = ["Roberto","adriana","José","Lucas","Felipe","Eduardo"];
+    function botao_click() {
+        for (let i = 0; i < clientes.length; i++) {
+            var cliente = clientes[i];
+
+            alert(cliente);
+        }
+
+    }
+
+</script>
