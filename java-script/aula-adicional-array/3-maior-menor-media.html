@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <title>Título</title>
     <meta name="robots" content="noindex,nofollow">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../style.css" />
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
 </head>
+
 <body>
     <div class="container">
         <div class="box">
@@ -28,23 +30,53 @@
     <script>
 
         var numeros = [];
-        var quantidade = parseInt(document.getElementById("txtQunantidade").value);
-        var numeroDigitado = parseInt(document.getElementById("txtNumeros").value);
+
+
 
         function botao_click() {
 
+            var quantidade = parseInt(document.getElementById("txtQunantidade").value);
+            var numeroDigitado = parseInt(document.getElementById("txtNumeros").value);
+
             if (numeros.length < quantidade) {
+
+
                 numeros.push(numeroDigitado);
 
                 document.getElementById("txtNumeros").value = "";
                 document.getElementById("txtNumeros").focus();
-
-                alert(numeros.toString());
             }
+            if (numeros.length == quantidade) {
 
+                var maiorNumero;
+                var menorNumero;
+                var soma = 0;
+                var media;
+
+                for (var i = 0; i < numeros.length; i++) {
+
+                    var numero = numeros[i];
+
+                    if (maiorNumero == undefined || numero > maiorNumero) {
+                        maiorNumero = numero;
+                    }
+                    if (menorNumero == undefined || numero < menorNumero) {
+                        menorNumero = numero;
+                    }
+
+                    soma += numero;
+                }
+                media = soma / numeros.length;
+                var mensagem = "o maior numero é " + maiorNumero + ", o menor numero é " + menorNumero + " e a media desses numeros é " + media;
+                alert(mensagem);   
+                document.getElementById("txtNumeros").value = "";
+                document.getElementById("txtQunantidade").value = "";
+                numeros = [];
+            }
         }
 
     </script>
 
 </body>
+
 </html>
