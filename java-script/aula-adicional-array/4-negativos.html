@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>negativos</h1>
+
+            <label for="txtQuantidade">quantidade de numeros:</label>
+            <input type="number" id="txtQuantidade">
+
+            <label for="txtNumeros">numeros:</label>
+            <input type="number" id="txtNumeros">
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        var negativos = [];
+
+        function botao_click() {
+
+            var quantidade = parseInt(document.getElementById("txtQuantidade").value);
+            var numeroDigitado = parseInt(document.getElementById("txtNumeros").value);
+            var mensagem = "os numeros negativos são "
+            
+            if(negativos.length <= quantidade && numeroDigitado < 0) {
+                negativos.push(numeroDigitado);
+                document.getElementById("txtNumeros").value = "";
+            }
+            if(negativos.length == quantidade) {
+                mensagem += negativos.toString();
+                alert(mensagem);
+                negativos = [];
+                document.getElementById("txtQuantidade").value = ""; 
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>nome,idade</h1>
+
+            <p>coloque o quantas pessoas vc vai informar e coloque nome e idade de cada</p>
+
+            <label for="txtQuantidade">quantidade:</label>
+            <input type="number" id="txtQuantidade">
+
+            <label for="txtNome">nome:</label>
+            <input type="text" id="txtNome" autocomplete="off">
+
+            <label for="txtIdade">idade:</label>
+            <input type="number" id="txtIdade">
+
+            <button onclick="botao_click()">armazenar</button>
+
+
+        </div>
+    </div>
+
+    <script>
+
+        var nomes = [];
+        var idades = [];
+        var last = [];
+
+        function botao_click() {
+
+            var quantidade = parseInt(document.getElementById("txtQuantidade").value);
+            var nome = document.getElementById("txtNome").value;
+            var idade = parseInt(document.getElementById("txtIdade").value);
+            var mensagem = "a pessoa mais velha das que vc escreveu é "
+
+            if(nomes.length < quantidade && !(document.getElementById("txtIdade").value == "")) {
+                nomes.push(nome);
+                document.getElementById("txtNome").value = "";
+                document.getElementById("txtNome").focus();
+            }
+            if(idades.length < quantidade && !(document.getElementById("txtIdade").value == "")) {
+                idades.push(idade);
+                document.getElementById("txtIdade").value = "";
+            }
+            if(nomes.length == quantidade && idades.length == quantidade) {
+                var maiorIdade;
+
+                for(var i = 0; i < idades.length;i++) {
+                    var idadeComparada = idades[i];
+
+                    if(maiorIdade == undefined || idadeComparada > maiorIdade) {
+                        maiorIdade = idadeComparada;
+                        last.push(i);
+                    }
+                }
+
+                mensagem += nomes[last.pop()];
+                alert(mensagem)
+
+                nomes = [];
+                idades = [];
+                last = [];
+
+                document.getElementById("txtQuantidade").value = "";
+                document.getElementById("txtQuantidade").focus();
+            }
+        }
+
+    </script>
+
+</body>
+</html>
